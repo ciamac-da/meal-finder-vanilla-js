@@ -5,18 +5,26 @@
 }
 body {
   font-family: 'Fira Sans', sans-serif;
-  background: #2d2013;
+  background: brown;
   color: #fff;
   margin: 0
 }
 .container {
-  margin: auto;
+  margin: 30px auto;
   max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+h1 {
+  padding: 20px;
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px gray;
+}
+h2 {
+  padding: 20px;
 }
 .flex {
   display: flex;
@@ -31,7 +39,8 @@ button {
   margin: 0
 }
 input[type="text"] {
-  width: 300px
+  width: 300px;
+  text-align: center;
 }
 .random-btn {
   cursor: pointer;
@@ -88,7 +97,7 @@ input[type="text"] {
 .single-meal-info {
   margin: 20px;
   padding: 10px;
-  border: 2px #e09850 dashed;
+  border: 2px gray dashed;
   border-radius: 5px;
 }
   margin: 0;
