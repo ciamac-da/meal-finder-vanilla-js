@@ -56,6 +56,20 @@ fetch(API_ID)
 })
 }
 
+// Fetch random meal from API
+const getRandomMeal = () => {
+  // Clear Meals and heading
+  mealsEl.innerHTML = "";
+  resultHeading.innerHTML = "";
+  const API_RANDOM = `https://www.themealdb.com/api/json/v1/1/random.php`
+  fetch(API_RANDOM)
+  .then(res => res.json())
+  .then(data => {
+    const meal = data.meals[0]
+    addMealToDOM(meal)
+  })
+}
+
 // Add Meal to DOM
 const addMealToDOM = (meal) => {
 const ingredients = []
@@ -87,6 +101,8 @@ ${ingredients.map(ing => `<li>${ing}</li>`).join("")}
 
 // Event Listeners
 submit.addEventListener("submit", searchMeal)
+random.addEventListener("click", getRandomMeal)
+
 
 //
 mealsEl.addEventListener("click", e => {
